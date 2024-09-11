@@ -9,5 +9,6 @@ Feel free to hate this configuration by opening an issue.
 - My family
 - Sean Strickland
 
+# Showcase
 ![Desktop preview](./Pictures/Screenshots/preview.png)
 
