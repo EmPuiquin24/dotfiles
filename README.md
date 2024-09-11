@@ -9,4 +9,5 @@ Feel free to hate this configuration by opening an issue.
 - My family
 - Sean Strickland
 
-![Desktop preview] (./Pictures/Screenshots/preview.png)
+![Desktop preview] (../Pictures/Screenshots/preview.png)
+
