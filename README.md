@@ -3,7 +3,7 @@
 Dotfiles configuration for Hyprland and Arch Linux.
 Feel free to hate this configuration by opening an issue.
 
-# Acknowledgments:
+# Acknowledgments
 - Grazen (ElCholoGamer R.I.P)
 - Avenged Sevenfold (Best band ever)
 - My family
