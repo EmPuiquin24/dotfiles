@@ -8,3 +8,5 @@ Feel free to hate this configuration by opening an issue.
 - Avenged Sevenfold (Best band ever)
 - My family
 - Sean Strickland
+
+![Desktop Preview] (~/Pictures/preview.png)
