@@ -1,0 +1,178 @@
+{
+	"layer": "top",
+	"position": "top",
+	"height": 38,
+	"spacing": 4,
+	"margin-top": 8,
+	"margin-right": 8,
+	"margin-left": 8,
+	"margin-bottom": 0,
+	"fixed-center": true,
+	"modules-center": [
+		"hyprland/workspaces"
+		// "custom/media"
+	],
+	"modules-left": [
+		"custom/sysmenu",
+		"hyprland/language",
+		"tray",
+		"hyprland/window"
+	],
+	"modules-right": [
+		// "mpd",
+		"hyprland/submap",
+		// "wireplumber",
+		"pulseaudio",
+		"network",
+		"temperature",
+		"battery",
+		"clock",
+	],
+	"custom/sysmenu": {
+		"format": "󰣇",
+		"tooltip-format": "",
+		"on-click": "rofi -show drun"
+	},
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"warp-on-scroll": false,
+		"format-icons": {
+			"1": "", "persistent": true,
+			"2": "",
+			"3": "", 
+			"4": "󰨞",
+			"5": "",
+			"9": "",
+			"10": "",
+			"11": "󰨇",
+			"12": "",
+			"13": "",
+			"default": ""
+		},
+	},
+	"hyprland/window": {
+		"format": "{initialTitle}",
+		"rewrite": {
+			"(.*) - Pinta": "Pinta",
+			"(.*) - Brave": "Brave",
+			"(.*) - Obsidian (.*)": "Obsidian",
+			"MATLAB (.*)": "MATLAB",
+			"(.*) - Discord": "Discord",
+			"(.*) - Putty": "Putty"
+		},
+			
+		"icon": true,
+		"icon-size": 21,
+		"separate-outputs": true,
+	},
+
+	// "mpd": {
+	// 	"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+	// 	"format-disconnected": "Disconnected ",
+	// 	"format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+	// 	"unknown-tag": "N/A",
+	// 	"interval": 5,
+	// 	"consume-icons": {
+	// 		"on": " "
+	// 	},
+	// 	"random-icons": {
+	// 		"off": "<span color=\"#f53c3c\"></span> ",
+	// 		"on": " "
+	// 	},
+	// 	"repeat-icons": {
+	// 		"on": " "
+	// 	},
+	// 	"single-icons": {
+	// 		"on": "1 "
+	// 	},
+	// 	"state-icons": {
+	// 		"paused": "",
+	// 		"playing": ""
+	// 	},
+	// 	"tooltip-format": "MPD (connected)",
+	// 	"tooltip-format-disconnected": "MPD (disconnected)"
+	// },
+	"hyprland/submap": {
+		"format": " {}",
+		"on-click": "hyprctl dispatch submap reset"
+	},
+	"tray": {
+		"spacing": 10
+	},
+	"clock": {
+		"interval": 1,
+		"format": "{:%d/%m %H:%M}",
+		"format-alt": "{:%d/%m/%Y %H:%M:%S}",
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+	},
+	"temperature": {
+		"interval": 2,
+		// "thermal-zone": 2,
+		// "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+		"critical-threshold": 80,
+		"format": "{icon} {temperatureC}°C",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	"hyprland/language": {
+		"format": " {short}"
+	},
+	"battery": {
+		"interval": 5,
+		"full-at": 97,
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon} {capacity}%",
+		"format-full": "{icon} {capacity}%",
+		"format-charging": " {capacity}%",
+		"format-plugged": " {capacity}%",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	"network": {
+		"interval": 1,
+		"format-wifi": " {bandwidthTotalBytes}",
+		"format-ethernet": "{ipaddr}/{cidr} ",
+		"tooltip-format": "{essid}",
+		"format-disconnected": " Offline",
+		"on-click": "nm-connection-editor"
+	},
+	"pulseaudio": {
+		"scroll-step": 5,
+		"format": "{icon} {volume}%",
+		"format-muted": " {volume}%",
+		"format-icons": {
+			"default": [
+				"",
+				""
+			]
+		},
+		"on-click": "pavucontrol"
+	},
+	// "custom/media": {
+	// 	"format": "{icon} {}",
+	// 	"return-type": "json",
+	// 	"max-length": 40,
+	// 	"format-icons": {
+	// 		"spotify": "",
+	// 		"default": "🎜"
+	// 	},
+	// 	"escape": true,
+	// 	"exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+	// 	// "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+	// },
+	}
+}
+
