@@ -58,7 +58,8 @@
 			"(.*) - Obsidian (.*)": "Obsidian",
 			"MATLAB (.*)": "MATLAB",
 			"(.*) - Discord": "Discord",
-			"(.*) - Putty": "Putty"
+			"(.*) - Putty": "Putty",
+			"Loading...": "Nautilus"
 		},
 			
 		"icon": true,
