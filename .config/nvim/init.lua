@@ -2,16 +2,12 @@
 
 =====================================================================
 ==================== READ THIS BEFORE CONTINUING ====================
-=====================================================================
-========                                    .-----.          ========
-========         .----------------------.   | === |          ========
-========         |.-""""""""""""""""""-.|   |-----|          ========
+===================================================================== ========                                    .-----.          ======== ========         .----------------------.   | === |          ======== ========         |.-""""""""""""""""""-.|   |-----|          ========
 ========         ||                    ||   | === |          ========
 ========         ||   KICKSTART.NVIM   ||   |-----|          ========
 ========         ||                    ||   | === |          ========
 ========         ||                    ||   |-----|          ========
-========         ||:Tutor              ||   |:::::|          ========
-========         |'-..................-'|   |____o|          ========
+========         ||:Tutor              ||   |:::::|          ======== ========         |'-..................-'|   |____o|          ========
 ========         `"")----------------(""`   ___________      ========
 ========        /::::::::::|  |::::::::::\  \ no mouse \     ========
 ========       /:::========|  |==hjkl==:::\  \ required \    ========
@@ -160,6 +156,10 @@ vim.opt.scrolloff = 10
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+-- Binary Tree
+
+vim.api.nvim_set_keymap("n", "<C-n>", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
@@ -243,6 +243,22 @@ require("lazy").setup({
 	--    require('gitsigns').setup({ ... })
 	--
 	-- See `:help gitsigns` to understand what the configuration keys do
+	--
+	{
+		"nvim-tree/nvim-tree.lua",
+		version = "*",
+		lazy = false,
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
+		config = function()
+			require("nvim-tree").setup({})
+		end,
+	},
+	{
+		"stevearc/conform.nvim",
+		opts = {},
+	},
 	{ -- Adds git related signs to the gutter, as well as utilities for managing changes
 		"lewis6991/gitsigns.nvim",
 		opts = {
@@ -662,6 +678,7 @@ require("lazy").setup({
 			end,
 			formatters_by_ft = {
 				lua = { "stylua" },
+				python = { "isort", "black" },
 				-- Conform can also run multiple formatters sequentially
 				-- python = { "isort", "black" },
 				--
