@@ -10,5 +10,5 @@ Feel free to hate this configuration by opening an issue.
 - Sean Strickland
 
 # Showcase
-![Desktop preview](./Pictures/Screenshots/preview.png)
+![Desktop preview](~/2024-11-28-215004_hyprshot.png)
 

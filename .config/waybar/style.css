@@ -109,6 +109,11 @@ window#waybar.hidden {
 	margin-right: 0;
 }
 
+#window {
+	font-weight: bold;
+	color: #f7768e;
+}
+
 #language {
 	color: @bright-white;
 }
@@ -136,6 +141,10 @@ window#waybar.hidden {
 
 label:focus {
 	background-color: @background;
+}
+
+#pulseaudio {
+	color: #bb9af7;
 }
 
 #pulseaudio.muted {
@@ -178,7 +187,7 @@ label:focus {
 }
 
 #clock {
-	color: @bright-yellow;
+	color: #73daca;
 }
 
 #tray > .passive {

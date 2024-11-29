@@ -1,8 +1,7 @@
 --[[
 
 =====================================================================
-==================== READ THIS BEFORE CONTINUING ====================
-===================================================================== ========                                    .-----.          ======== ========         .----------------------.   | === |          ======== ========         |.-""""""""""""""""""-.|   |-----|          ========
+==================== READ THIS BEFORE CONTINUING ==================== ===================================================================== ========                                    .-----.          ======== ========         .----------------------.   | === |          ======== ========         |.-""""""""""""""""""-.|   |-----|          ========
 ========         ||                    ||   | === |          ========
 ========         ||   KICKSTART.NVIM   ||   |-----|          ========
 ========         ||                    ||   | === |          ========
@@ -254,6 +253,12 @@ require("lazy").setup({
 		config = function()
 			require("nvim-tree").setup({})
 		end,
+	},
+	{
+		"azratul/live-share.nvim",
+		dependencies = {
+			"jbyuki/instant.nvim",
+		},
 	},
 	{
 		"stevearc/conform.nvim",
@@ -840,7 +845,6 @@ require("lazy").setup({
 			--  - yinq - [Y]ank [I]nside [N]ext [Q]uote
 			--  - ci'  - [C]hange [I]nside [']quote
 			require("mini.ai").setup({ n_lines = 500 })
-
 			-- Add/delete/replace surroundings (brackets, quotes, etc.)
 			--
 			-- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
